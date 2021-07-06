@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="mb-5">Services</h1>
+    <div class="list-group">
+        {% for service in services %}
+            <a href="/{{ service }}" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="my-3">{{ service }}</h5>
+                    <small class="text-muted">Service</small>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

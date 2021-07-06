@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3 class="mb-5">{{ method_name }}</h3>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <p class="mb-1">Send a post request (with Curl, Postman, ...) to this page with request parameter as
+                    json body</p>
+                <small class="text-muted">Method</small>
+            </div>
+            <p class="mb-1 bold"><strong>Request:</strong></p>
+            <small class="text-muted">{{ req|join('\n') }}</small>
+            <p class="my-1 bold"><strong>Response:</strong></p>
+            <small class="text-muted">{{ res|join('\n') }}</small>
+        </a>
+    </div>
+{% endblock %}

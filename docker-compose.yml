@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  grpcson:
+    image: siyanew/grpcson:latest
+    ports:
+    - "5912:5912"
+    environment:
+      "HOST": "127.0.0.1"
+      "PORT": "8000"
+    network_mode: "host"
+
